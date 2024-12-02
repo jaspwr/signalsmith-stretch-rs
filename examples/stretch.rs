@@ -110,11 +110,6 @@ where
 
             // Now we're ready to stretch.
             stretch.process(&input_buffer, output);
-            eprintln!(
-                "input latency: {}, output latency: {}",
-                stretch.input_latency(),
-                stretch.output_latency()
-            );
         },
         |err| eprintln!("an error occurred on stream: {}", err),
         None,
