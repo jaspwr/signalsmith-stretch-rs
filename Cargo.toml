@@ -1,5 +1,6 @@
 [package]
 name = "signalsmith-stretch"
+description = "A wrapper for the Signalsmith Stretch timestretch and pitch-shifting algorithm"
 version = "0.1.0"
 edition = "2021"
 authors = ["Colin Marc <hi@colinmarc.com>"]
