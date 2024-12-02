@@ -1,0 +1,22 @@
+[package]
+name = "signalsmith-stretch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Colin Marc <hi@colinmarc.com>"]
+license = "MIT"
+
+[dependencies]
+dasp = "0.11"
+
+[build-dependencies]
+bindgen = "0.70"
+cc = "1"
+
+[dev-dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+cpal = "0.15"
+dasp = { version = "0.11", features = ["signal"] }
+hound = "3"
+oneshot = "0.1"
+
