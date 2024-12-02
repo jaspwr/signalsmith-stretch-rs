@@ -16,6 +16,7 @@ fn main() {
 
     let bindings = bindgen::Builder::default()
         .header(src_path.join("wrapper.h").as_os_str().to_str().unwrap())
+        .allowlist_item("signalsmith_stretch_.*")
         .generate()
         .expect("Unable to generate bindings");
 
