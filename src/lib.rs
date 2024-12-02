@@ -137,6 +137,21 @@ impl Stretch {
             );
         }
     }
+
+    /// Flush remaining output from the decoder. Use [Self::output_latency] to
+    /// determine the correct length of the output buffer.
+    pub fn flush(&mut self, mut output: impl AsMut<[f32]>) {
+        let output = output.as_mut();
+        debug_assert_eq!(0, output.len() % self.channel_count);
+
+        unsafe {
+            sys::signalsmith_stretch_flush(
+                self.inner,
+                output.as_mut_ptr(),
+                output.len() / self.channel_count,
+            );
+        }
+    }
 }
 
 impl Drop for Stretch {
