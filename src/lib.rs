@@ -1,13 +1,6 @@
-// struct Stretch<F: dasp::Frame> {
-//
-// }
-//
-// impl<F: Frame> Stretch<F> {
-//     /// Create a new buffer for time-stretching and pitch-shifting audio.
-//     pub fn new() -> Self {
-//
-//     }
-// }
+//! A rust wrapper for the
+//! [Signalsmith Stretch](https://github.com/Signalsmith-Audio/signalsmith-stretch)
+//! audio stretching and pitch-shifting library.
 
 #[allow(non_camel_case_types)]
 mod sys {
